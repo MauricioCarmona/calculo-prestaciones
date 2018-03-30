@@ -39,6 +39,10 @@ p.resultados {
     font-size: 120%;
     text-align: center;
 }
+p.resmos {
+    color: navy;
+    font-size: 110%;
+}
 
 .calculo {
   background: lightgrey;

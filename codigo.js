@@ -34,6 +34,7 @@ function dimelosdatos()
     }
     
     var antiguedadDias = (aTrabajadosNum * 365) + dTrabajadosNum;
-    
-    document.write("<h2>La antiguedad del trabajador en días es " + antiguedadDias + "</h2>");
+    var resmos = document.getElementById("result");
+    resmos.innerHTML = "La antiguedad del trabajador en días es " + antiguedadDias + " días.";
 }
+
