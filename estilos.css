@@ -1,0 +1,67 @@
+body {
+    background-color: bisque;
+    font-family: Helvetica;
+    font-size: 130%;
+}
+
+h1{
+    text-align: center;
+    color: navy;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+div.polaroid {
+  width: 150px; 
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+  margin-left: auto;
+    margin-right: auto;
+}
+
+div.container {
+  text-align: center;
+  padding: 1px 3px;
+}
+
+p.copyright {
+    color: black;
+    font-size: 15px;
+}
+
+p.instrucciones {
+    text-align: center;
+    color: darkslategrey;
+    font-size: 120%;
+}
+
+p.resultados {
+    color: navy;
+    font-size: 120%;
+    text-align: center;
+}
+
+.calculo {
+  background: lightgrey;
+  padding: 0.7em;
+  
+  border: 0;
+  margin: 2rem auto 0 auto;
+}
+
+input:focus {
+  outline: 1px solid navy;
+}
+
+.calculo:hover {
+      background: navy;
+  color: white;
+}
+
+form {
+  padding: 1em;
+  background: #faffc4;
+  border: 1px solid #c1c1c1;
+  margin: 2rem auto 0 auto;
+  max-width: 600px;
+  padding: 1em;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CÁLCULO DE PRESTACIONES</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Cálculo de prestaciones</h1>
+    
+    <div class="polaroid">
+            <img src="https://pbs.twimg.com/profile_images/917882505641914368/til1WA9H_400x400.jpg" alt="Autor_del_programa" style="width: 150px">
+                <div class="container">
+    <p class="copyright">Autor del código: <strong>Mauricio Martínez</strong></p>
+                </div>
+            </div>
+    <p class="instrucciones"><strong>Esta es una calculadora de prestaciones. Coloca los datos del trabajador donde se te indica para obtener los resultados.</strong></p>
+    
+    <form>
+    
+    <p><strong>- Tiempo trabajado</strong></p>
+    <label for="añosTrabajados" class="añosTrabajados">Años</label>
+    <input id="a_Trabajados" type="number">
+ 
+    <label for="diasTrabajados" class="diasTrabajados">Días</label>
+    <input id="diasTrabajados" type="number">
+
+    <p><strong>- Sueldo base mensual</strong></p>
+    <label for="pesos" class="pesos">$</label>
+    <input type="text" id="sbm">
+    <p><strong>- Días de aguinaldo</strong></p>
+    <input type="text" id="diasAguinaldo">
+        <input type="button" value="LFT" id="lftaguinaldo">
+    <p><strong>- Vacaciones</strong></p>
+    <input type="text" id="vacaciones">
+        <input type="button" value="LFT" id="lftvacaciones">
+    <p><strong>- Prima vacacional (%)</strong></p>
+    <input type="text" id="primaVacacional">
+        <input type="button" value="LFT" id="lftprimavacacional">
+        <br>
+        
+        <input type="button" class="calculo" id="calculo" value="Calcular">
+        </form>
+    <p class="resultados">RESULTADOS:</p>
+        
+    <script src = codigo.js></script>
+    
+    
+</body>
+
+</html>
