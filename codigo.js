@@ -1,3 +1,4 @@
+//Obtener los ID's de los inputs en el HTML
 var aTrabajados = document.getElementById("a_Trabajados");
 var diasTrabajados = document.getElementById("diasTrabajados");
 var sueldoMensual = document.getElementById("sbm");
@@ -8,6 +9,8 @@ var LFTAguinaldo = document.getElementById("lftaguinaldo");
 var LFTVacaciones = document.getElementById("lftvacaciones");
 var LFTPrimaV = document.getElementById("lftprimavacacional");
 var botonCalcular = document.getElementById("calculo");
+
+//Asignarles tareas a los botones.
 botonCalcular.addEventListener("click", dimelosdatos);
 LFTAguinaldo.addEventListener("click", rellenarlfta);
 LFTVacaciones.addEventListener("click", rellenarlftv);
@@ -38,11 +41,52 @@ function dimelosdatos()
     var diasVacaciones = parseInt(vacaciones.value);
     var primaVacacionalNum = parseInt(primaVacacional.value);
     
-    //calculos
+    //CALCULOS
+    var salarioMinimo = 88.36;
     var salarioDiario = (sbasemens / 30);
     var antiguedadDias = (aTrabajadosNum * 365) + dTrabajadosNum;
-    var aguinaldo = ((salarioDiario*30)/365)*225;
+    var aguinaldo;
+    var vacaciones1;
+    var primaVacacionalF;
+    var salarioNoMenorAlDoble;
+    var primaDeAntiguedadF;
+    
+    if (salarioDiario >= salarioMinimo) //Si el trabajador gana conforme a la ley.
+        {
+    //Para la prima de antiguedad, tenemos que tomar un Salario Diario no mayor a dos salarios mínimos.
+    if (salarioDiario > (salarioMinimo*2))//Si el salario diario excede el doble del salario mínimo
+        {
+            var salarioNoMenorAlDoble = salarioMinimo*2;
+        }
+    else if (salarioDiario < (salarioMinimo*2) && salarioDiario > (salarioMinimo))
+             {
+                var salarioNoMenorAlDoble = salarioDiario;
+             }
+    
+    //Las prestaciones varían si trabajó más de un año o no.
+    if (aTrabajadosNum >= 1) // Si laboró más de un año.
+        {
+            var aguinaldo = (salarioDiario*diasdeAguinaldo);
+            var vacaciones1 = salarioDiario*diasVacaciones;
+            var primaVacacionalF = vacaciones1*0.20;
+            var primaDeAntiguedadF = ((salarioNoMenorAlDoble*12)*aTrabajadosNum)+((((salarioNoMenorAlDoble*12)*aTrabajadosNum)/365)*dTrabajadosNum);
+        }
+    else if (aTrabajadosNum == 0) //Si no laboró un año entero.
+        {
+            var aguinaldo = ((salarioDiario*diasdeAguinaldo)/365)*dTrabajadosNum;
+            var vaciones1 = 0; //No tiene derecho a vacaciones.
+            var primaVacacionalF= 0; //Por ende tampoco a prima vacacional.
+            var primaDeAntiguedadF = ((((salarioNoMenorAlDoble*12)*aTrabajadosNum)/365)*dTrabajadosNum);
+        }
+    
     var resmos = document.getElementById("result");
-    resmos.innerHTML = "La antiguedad del trabajador en días es " + antiguedadDias + " días.</br>" + "Este trabajador ha laborado " + aTrabajadosNum + " años, con " + dTrabajadosNum + " días.<br/>Su sueldo base mensual es de $" + sbasemens + ".<br/> Le corresponden " + diasdeAguinaldo + " días de aguinaldo" + ", " + diasVacaciones + " días de vacaciones y una prima vacacional del " + primaVacacionalNum + "%<br/>Su salario diario es de $" + salarioDiario + " (redondeado a $" + Math.ceil(salarioDiario) + "). <br/> Su aguinaldo equivale a $" + aguinaldo  + " (redondeado a $" + Math.ceil(aguinaldo) + ").";
+    resmos.innerHTML = "La <strong>antiguedad del trabajador en días</strong> es <strong>" + antiguedadDias + " días</strong>.</br><hr>" + "Este trabajador ha laborado " + aTrabajadosNum + " años, con " + dTrabajadosNum + " días.<br/><hr>Su <strong>sueldo base mensual</strong> es de <strong>$" + sbasemens + "</strong>.<br/><hr> Le corresponden <strong>" + diasdeAguinaldo + " días de aguinaldo</strong>" + ", <strong>" + diasVacaciones + " días de vacaciones</strong> y una <strong>prima vacacional del " + primaVacacionalNum + "%</strong><br/><hr>Su <strong>salario diario</strong> es de <strong>$" + salarioDiario + "</strong> (redondeado a <strong>$" + Math.ceil(salarioDiario) + "</strong>). <br/><hr>Su <strong>aguinaldo</strong> equivale a <strong>$" + aguinaldo  + "</strong> (redondeado a <strong>$" + Math.ceil(aguinaldo) + "</strong>).<br/><hr>Durante sus " + diasVacaciones + " días de vacaciones, el trabajador recibirá en total <strong>$" + vacaciones1 + "</strong> (redondeado a <strong>$" + Math.ceil(vacaciones1) + "</strong>).<br/><hr>El trabajador gozará de una <strong>prima vacacional</strong> equivalente a <strong>$" + primaVacacionalF + " </strong>(redondeado a <strong>$" + Math.ceil(primaVacacionalF) + "</strong>).<br/><hr>La <strong>prima de antiguedad</strong> que le corresponde, es de <strong>$" + primaDeAntiguedadF + "</strong> (redondeado a <strong>$" + Math.ceil(primaDeAntiguedadF) + "</strong>).";
+}
+    else //Si el trabajador no gana conforme a la ley.
+    {
+        alert("ALERTA: USTED ESTÁ SOBREEXPLOTANDO A SU TRABAJADOR.\nEstá pagándole $" + Math.ceil(salarioDiario) + " al día, y la ley establece que el salario mínimo es de $" + salarioMinimo + ". Debería estar avergonzado.");
+        var resmos2 = document.getElementById("resultexplotador");
+        resmos2.innerHTML = "¡MALDITO SOBREEXPLOTADOR!";
+    }
 }
 

@@ -28,25 +28,61 @@ p.copyright {
     font-size: 15px;
 }
 
+input[type=number] {
+    font-size: 120%;
+    width : 150px;
+}
+
+.botonlft {
+  background: grey;
+  padding: 0.5em;
+  color: white;
+  font-size: 80%;
+    font-weight: bold;
+  
+  border: 0;
+  margin: 0rem auto 0 auto;
+}
+
+.botonlft:hover {
+    background: black;
+    
+}
+
+p.titform {
+    font-size: 120%;
+}
+
+label {
+    font-size: 135%;
+}
+
 p.instrucciones {
     text-align: center;
     color: darkslategrey;
     font-size: 120%;
+    width: bold;
 }
 
 p.resultados {
     color: navy;
-    font-size: 120%;
+    font-size: 160%;
     text-align: center;
 }
 p.resmos {
     color: navy;
-    font-size: 110%;
+    font-size: 140%;
+}
+p.resmos2 {
+    color: red;
+    font-size: 500%;
+    text-align: center;
 }
 
 .calculo {
   background: lightgrey;
   padding: 0.7em;
+  font-size: 118%;
   
   border: 0;
   margin: 2rem auto 0 auto;
@@ -59,11 +95,20 @@ input:focus {
 .calculo:hover {
       background: navy;
   color: white;
+    font-weight: bold;
 }
 
 form {
   padding: 1em;
   background: #faffc4;
+  border: 1px solid #c1c1c1;
+  margin: 2rem auto 0 auto;
+  max-width: 600px;
+  padding: 1em;
+}
+form.resulta {
+  padding: 1em;
+  background: #e0edff;
   border: 1px solid #c1c1c1;
   margin: 2rem auto 0 auto;
   max-width: 600px;
