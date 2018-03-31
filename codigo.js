@@ -43,6 +43,6 @@ function dimelosdatos()
     var antiguedadDias = (aTrabajadosNum * 365) + dTrabajadosNum;
     var aguinaldo = ((salarioDiario*30)/365)*225;
     var resmos = document.getElementById("result");
-    resmos.innerHTML = "La antiguedad del trabajador en días es " + antiguedadDias + " días.</br>" + "Este trabajador ha laborado " + aTrabajadosNum + " años, con " + dTrabajadosNum + " días.<br/>Su sueldo base mensual es de $" + sbasemens + ".<br/> Le corresponden " + diasdeAguinaldo + " días de aguinaldo" + ", " + diasVacaciones + " días de vacaciones y una prima vacacional del " + primaVacacionalNum + "%<br/>Su salario diario es de $" + salarioDiario + " (redondeado a $" + Math.floor(salarioDiario) + "). <br/> Su aguinaldo equivale a $" + aguinaldo  + " (redondeado a $" + Math.floor(aguinaldo) + ").";
+    resmos.innerHTML = "La antiguedad del trabajador en días es " + antiguedadDias + " días.</br>" + "Este trabajador ha laborado " + aTrabajadosNum + " años, con " + dTrabajadosNum + " días.<br/>Su sueldo base mensual es de $" + sbasemens + ".<br/> Le corresponden " + diasdeAguinaldo + " días de aguinaldo" + ", " + diasVacaciones + " días de vacaciones y una prima vacacional del " + primaVacacionalNum + "%<br/>Su salario diario es de $" + salarioDiario + " (redondeado a $" + Math.ceil(salarioDiario) + "). <br/> Su aguinaldo equivale a $" + aguinaldo  + " (redondeado a $" + Math.ceil(aguinaldo) + ").";
 }
 
