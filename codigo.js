@@ -70,17 +70,22 @@ function dimelosdatos()
             var vacaciones1 = salarioDiario*diasVacaciones;
             var primaVacacionalF = vacaciones1*0.20;
             var primaDeAntiguedadF = ((salarioNoMenorAlDoble*12)*aTrabajadosNum)+((((salarioNoMenorAlDoble*12)*aTrabajadosNum)/365)*dTrabajadosNum);
+            
+            var resmos = document.getElementById("result");
+    resmos.innerHTML = "La <strong>antiguedad del trabajador en días</strong> es <strong>" + antiguedadDias + " días</strong>.</br><hr>" + "Este trabajador ha laborado " + aTrabajadosNum + " años, con " + dTrabajadosNum + " días.<br/><hr>Su <strong>sueldo base mensual</strong> es de <strong>$" + sbasemens + "</strong>.<br/><hr> Le corresponden <strong>" + diasdeAguinaldo + " días de aguinaldo</strong>" + ", <strong>" + diasVacaciones + " días de vacaciones</strong> y una <strong>prima vacacional del " + primaVacacionalNum + "%</strong><br/><hr>Su <strong>salario diario</strong> es de <strong>$" + salarioDiario + "</strong> (redondeado a <strong>$" + Math.ceil(salarioDiario) + "</strong>). <br/><hr>Su <strong>aguinaldo</strong> equivale a <strong>$" + aguinaldo  + "</strong> (redondeado a <strong>$" + Math.ceil(aguinaldo) + "</strong>).<br/><hr>Durante sus " + diasVacaciones + " días de vacaciones, el trabajador recibirá en total <strong>$" + vacaciones1 + "</strong> (redondeado a <strong>$" + Math.ceil(vacaciones1) + "</strong>).<br/><hr>El trabajador gozará de una <strong>prima vacacional</strong> equivalente a <strong>$" + primaVacacionalF + " </strong>(redondeado a <strong>$" + Math.ceil(primaVacacionalF) + "</strong>).<br/><hr>La <strong>prima de antiguedad</strong> que le corresponde, es de <strong>$" + primaDeAntiguedadF + "</strong> (redondeado a <strong>$" + Math.ceil(primaDeAntiguedadF) + "</strong>).";
         }
     else if (aTrabajadosNum == 0) //Si no laboró un año entero.
         {
             var aguinaldo = ((salarioDiario*diasdeAguinaldo)/365)*dTrabajadosNum;
             var vaciones1 = 0; //No tiene derecho a vacaciones.
             var primaVacacionalF= 0; //Por ende tampoco a prima vacacional.
-            var primaDeAntiguedadF = ((((salarioNoMenorAlDoble*12)*aTrabajadosNum)/365)*dTrabajadosNum);
-        }
-    
+            var primaDeAntiguedadF = (((salarioNoMenorAlDoble*12)/365)*dTrabajadosNum);
+            
+                
     var resmos = document.getElementById("result");
-    resmos.innerHTML = "La <strong>antiguedad del trabajador en días</strong> es <strong>" + antiguedadDias + " días</strong>.</br><hr>" + "Este trabajador ha laborado " + aTrabajadosNum + " años, con " + dTrabajadosNum + " días.<br/><hr>Su <strong>sueldo base mensual</strong> es de <strong>$" + sbasemens + "</strong>.<br/><hr> Le corresponden <strong>" + diasdeAguinaldo + " días de aguinaldo</strong>" + ", <strong>" + diasVacaciones + " días de vacaciones</strong> y una <strong>prima vacacional del " + primaVacacionalNum + "%</strong><br/><hr>Su <strong>salario diario</strong> es de <strong>$" + salarioDiario + "</strong> (redondeado a <strong>$" + Math.ceil(salarioDiario) + "</strong>). <br/><hr>Su <strong>aguinaldo</strong> equivale a <strong>$" + aguinaldo  + "</strong> (redondeado a <strong>$" + Math.ceil(aguinaldo) + "</strong>).<br/><hr>Durante sus " + diasVacaciones + " días de vacaciones, el trabajador recibirá en total <strong>$" + vacaciones1 + "</strong> (redondeado a <strong>$" + Math.ceil(vacaciones1) + "</strong>).<br/><hr>El trabajador gozará de una <strong>prima vacacional</strong> equivalente a <strong>$" + primaVacacionalF + " </strong>(redondeado a <strong>$" + Math.ceil(primaVacacionalF) + "</strong>).<br/><hr>La <strong>prima de antiguedad</strong> que le corresponde, es de <strong>$" + primaDeAntiguedadF + "</strong> (redondeado a <strong>$" + Math.ceil(primaDeAntiguedadF) + "</strong>).";
+    resmos.innerHTML = "La <strong>antiguedad del trabajador en días</strong> es <strong>" + antiguedadDias + " días</strong>.</br><hr>" + "Este trabajador no ha laborado ningún año, y ha laborado " + dTrabajadosNum + " días.<br/><hr>Su <strong>sueldo base mensual</strong> es de <strong>$" + sbasemens + "</strong>.<br/><hr> Le corresponden <strong>" + diasdeAguinaldo + " días de aguinaldo</strong>" + ", <strong>" + diasVacaciones + " días de vacaciones</strong> y una <strong>prima vacacional del " + primaVacacionalNum + "%</strong><br/><hr>Su <strong>salario diario</strong> es de <strong>$" + salarioDiario + "</strong> (redondeado a <strong>$" + Math.ceil(salarioDiario) + "</strong>). <br/><hr>Su <strong>aguinaldo</strong> equivale a <strong>$" + aguinaldo  + "</strong> (redondeado a <strong>$" + Math.ceil(aguinaldo) + "</strong>).<br/><hr>Este trabajador <strong>aún no tiene derecho a vacaciones</strong>, puesto que aún no cumple un año laborando en la empresa.<br/><hr>Por ende <strong>tampoco goza de prima vacacional</strong>.<br/><hr>La <strong>prima de antiguedad</strong> que le corresponde, es de <strong>$" + primaDeAntiguedadF + "</strong> (redondeado a <strong>$" + Math.ceil(primaDeAntiguedadF) + "</strong>).";
+        }
+
 }
     else //Si el trabajador no gana conforme a la ley.
     {
