@@ -9,12 +9,20 @@ var LFTAguinaldo = document.getElementById("lftaguinaldo");
 var LFTVacaciones = document.getElementById("lftvacaciones");
 var LFTPrimaV = document.getElementById("lftprimavacacional");
 var botonCalcular = document.getElementById("calculo");
+var botonLimpiar = document.getElementById("clean");
 
 //Asignarles tareas a los botones.
 botonCalcular.addEventListener("click", dimelosdatos);
+botonLimpiar.addEventListener("click", limpiar);
 LFTAguinaldo.addEventListener("click", rellenarlfta);
 LFTVacaciones.addEventListener("click", rellenarlftv);
 LFTPrimaV.addEventListener("click", rellenarlftpv);
+
+
+function limpiar()
+{
+    location.reload();
+}
 
 function rellenarlfta ()
 {
@@ -40,6 +48,9 @@ function dimelosdatos()
     var diasdeAguinaldo = parseInt(diasAguinaldo.value);
     var diasVacaciones = parseInt(vacaciones.value);
     var primaVacacionalNum = parseInt(primaVacacional.value);
+    
+    if(aTrabajadosNum, dTrabajadosNum, sbasemens, diasdeAguinaldo, diasVacaciones, primaVacacionalNum > 0) //
+{
     
     //CALCULOS
     var salarioMinimo = 88.36;
@@ -89,9 +100,14 @@ function dimelosdatos()
 }
     else //Si el trabajador no gana conforme a la ley.
     {
-        alert("ALERTA: USTED ESTÁ SOBREEXPLOTANDO A SU TRABAJADOR.\nEstá pagándole $" + Math.ceil(salarioDiario) + " al día, y la ley establece que el salario mínimo es de $" + salarioMinimo + ". Debería estar avergonzado.");
+        alert("ALERTA: USTED ESTÁ EXPLOTANDO A SU TRABAJADOR.\nEstá pagándole $" + Math.ceil(salarioDiario) + " al día, y la ley establece que el salario mínimo es de $" + salarioMinimo + ". Debería estar avergonzado.");
         var resmos2 = document.getElementById("resultexplotador");
         resmos2.innerHTML = "¡MALDITO SOBREEXPLOTADOR!";
+    }
+}
+    else
+    {
+        alert("Te faltó llenar algún campo. Por favor verifica que hayas llenado todos los campos y vuelve a intentarlo.")
     }
 }
 
