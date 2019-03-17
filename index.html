@@ -3,20 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CÁLCULO DE PRESTACIONES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora de Prestaciones</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/FaviconPrestaciones.png"/>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-    <h1>Cálculo de prestaciones</h1>
-    
-    <div class="polaroid">
-            <img src="https://pbs.twimg.com/profile_images/917882505641914368/til1WA9H_400x400.jpg" alt="Autor_del_programa" style="width: 150px">
-                <div class="container">
-    <p class="copyright">Autor del código: <strong>Mauricio Martínez</strong></p>
-                </div>
-            </div>
-    <p class="instrucciones"><strong>Esta es una calculadora de prestaciones. Coloca los datos del trabajador donde se te indica para obtener los resultados.</strong></p>
+   <section class="header">
+      <figure class="logoMC">
+          <a href="#"><img src="images/MCWhite.png" alt="Logo Mauricio Carmona"></a>
+      </figure>
+      </section>
+
+    <figure class="logoContainer">
+       <img class="i1600" src="images/Banner1600.png" alt="">
+        <img class="i1024" src="images/Banner.1024png.png" alt="Logo Prestaciones">
+    </figure>
+    <div class="generalContainer">
+        
+        <div class="headerContainer">
+    <p class="instrucciones">Esta es una calculadora de prestaciones. <br>Coloca los datos del trabajador donde se te indica para obtener los resultados.</p>
+      </div>
     
     <form>
     
@@ -24,7 +33,7 @@
     <label for="añosTrabajados" class="añosTrabajados">Años</label>
     <input id="a_Trabajados" type="number">
  
-    <label for="diasTrabajados" class="diasTrabajados">Días</label>
+    <label for="diasTrabajados" class="diasTrabajados"><span class="break"></span>Días</label>
     <input id="diasTrabajados" type="number">
 
     <p class="titform"><strong>- Sueldo base mensual</strong></p>
@@ -40,10 +49,12 @@
     <input type="number" id="primaVacacional">
         <input type="button" class="botonlft" value="LFT" id="lftprimavacacional">
         <br>
-        
-        <input type="button" class="calculo" id="calculo" value="Calcular">
+        <div class="centrado">
+            <input type="button" class="calculo" id="calculo" value="Calcular">
+        </div>
         </form>
-    <p class="resultados">RESULTADOS:</p>
+        <section class="showResults">
+            <p class="resultados">RESULTADOS:</p>
       <form class="resulta">
           <p class="resmos" id="result"></p>
       </form>
@@ -51,8 +62,15 @@
        <div class="centrado">
            <input type="button" class="clean" id="clean" value="Limpiar">
        </div>
-       
-       
+        </section>
+        
+               
+       <div class="container">
+           <p class="spam">Más proyectos en: <a href="#">mauriciocarmona.github.io</a></p>
+       </div>
+        
+    </div>
+
        
     <script src = codigo.js></script>
 </body>

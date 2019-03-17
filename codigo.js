@@ -13,6 +13,7 @@ var botonLimpiar = document.getElementById("clean");
 
 //Asignarles tareas a los botones.
 botonCalcular.addEventListener("click", dimelosdatos);
+botonCalcular.addEventListener("click", MostrarDatos);
 botonLimpiar.addEventListener("click", limpiar);
 LFTAguinaldo.addEventListener("click", rellenarlfta);
 LFTVacaciones.addEventListener("click", rellenarlftv);
@@ -39,6 +40,16 @@ function rellenarlftpv ()
     alert("La Ley Federal del Trabajo establece que el trabajador tendrá derecho a una prima no menor del 25% de lo que corresponda de ingresos durante el periodo de disfrute.");
 }
 
+function MostrarDatos()
+{
+        var Show = document.querySelector('.showResults');
+
+
+    Show.classList.add('now');
+    if (Show.classList.contains('now')){ console.log('se activó');
+    }
+}
+
 function dimelosdatos()
 {
     
@@ -50,10 +61,11 @@ function dimelosdatos()
     var primaVacacionalNum = parseInt(primaVacacional.value);
     
     if(aTrabajadosNum, dTrabajadosNum, sbasemens, diasdeAguinaldo, diasVacaciones, primaVacacionalNum > 0) //
+    
 {
     
     //CALCULOS
-    var salarioMinimo = 88.36;
+    var salarioMinimo = 102.68;
     var salarioDiario = (sbasemens / 30);
     var antiguedadDias = (aTrabajadosNum * 365) + dTrabajadosNum;
     var aguinaldo;
@@ -101,13 +113,20 @@ function dimelosdatos()
     else //Si el trabajador no gana conforme a la ley.
     {
         alert("ALERTA: USTED ESTÁ EXPLOTANDO A SU TRABAJADOR.\nEstá pagándole $" + Math.ceil(salarioDiario) + " al día, y la ley establece que el salario mínimo es de $" + salarioMinimo + ". Debería estar avergonzado.");
-        var resmos2 = document.getElementById("resultexplotador");
-        resmos2.innerHTML = "¡MALDITO SOBREEXPLOTADOR!";
+        var ShowExp = document.querySelector('.resmos2');
+
+
+    ShowExp.classList.add('now');
+    if (ShowExp.classList.contains('now')){ console.log('se activó');
     }
+
+        var resmos2 = document.getElementById("resultexplotador");
+        resmos2.innerHTML = "EXPLOTACIÓN";
+    }
+    
 }
     else
     {
         alert("Te faltó llenar algún campo. Por favor verifica que hayas llenado todos los campos y vuelve a intentarlo.")
     }
 }
-

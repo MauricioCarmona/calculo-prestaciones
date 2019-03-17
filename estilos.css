@@ -1,138 +1,450 @@
 body {
-    background-color: bisque;
-    font-family: Helvetica;
-    font-size: 130%;
+    background-color: #002156;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 0;
 }
 
-h1{
-    text-align: center;
-    color: navy;
-    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
-}
-div.polaroid {
-  width: 150px; 
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 20px;
-  margin-left: auto;
-    margin-right: auto;
+.generalContainer {
+    padding: 0 25px;
 }
 
-div.container {
-  text-align: center;
-  padding: 1px 3px;
+.logoMC {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
 }
 
-p.copyright {
-    color: black;
-    font-size: 15px;
+a {
+    color: white;
 }
 
-input[type=number] {
-    font-size: 120%;
-    width : 150px;
+a:hover {
+    color: #3acdff;
+    transition: 0.3s;
+}
+
+.logoContainer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.headerContainer {
+    max-width: 835px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 835px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: inherit;
+}
+
+hr { 
+  border : 0;
+  height: 2px; 
+  background-image: linear-gradient(to right, rgba(0, 33, 86, 0), rgba(0, 33, 86, 1), rgba(0, 33, 86, 0)); 
 }
 
 .botonlft {
-  background: grey;
+  background: white;
   padding: 0.5em;
-  color: white;
-  font-size: 80%;
+  color: navy;
+  font-size: 40px;
     font-weight: bold;
-  
+  width: 20%;
+    height: 80px;
   border: 0;
-  margin: 0rem auto 0 auto;
+  margin: 0 auto 0 10px;
 }
 
 .botonlft:hover {
-    background: black;
+    background: #3acdff;
+    color: white;
+    transition: 0.3s;
     
 }
 
 .clean {
-    background: #e2ecff;
+    background: #1c62d8;
   padding: 0.7em;
-  font-size: 118%;
-  
-  border: 1er;
+  font-size: 30px;
+    margin-top: 45px;
   margin-left: auto;
     margin-right: auto;
+    border: 0;
 }
 
 .clean:hover {
-    background: skyblue;
-  color: black;
+    background: #0045ba;
+    transition: 0.3s;
 }
 
 p.titform {
-    font-size: 120%;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
 
 label {
-    font-size: 135%;
+    font-size: 40px;
 }
 
 p.instrucciones {
     text-align: center;
-    color: darkslategrey;
-    font-size: 120%;
-    width: bold;
+    color: white;
+    font-size: 30px;
 }
 
 p.resultados {
-    color: navy;
-    font-size: 160%;
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
     text-align: center;
 }
 p.resmos {
     color: navy;
     font-size: 140%;
 }
-p.resmos2 {
+
+.resmos2 {
+    display: none;
+}
+
+.resmos2.now {
+    display: block;
     color: red;
     font-size: 500%;
     text-align: center;
 }
 
 .calculo {
-  background: lightgrey;
+  background: #3acdff;
+    background-image: linear-gradient(to right, #3d87ff, #005af1);
   padding: 0.7em;
-  font-size: 118%;
-  
+  font-size: 30px;
   border: 0;
-  margin: 2rem auto 0 auto;
-}
-
-input:focus {
-  outline: 1px solid navy;
+  margin: 40px auto 23px auto;
+    text-align: center;
 }
 
 .calculo:hover {
-      background: navy;
+      background: #3d87ff;
+    background-image: linear-gradient(to right, #1c62d8, #003fa8);
   color: white;
-    font-weight: bold;
+    transition: 0.5s;
 }
 
+
+input {
+    color: white;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid white;
+}
+
+
+input:focus {
+  outline: 0;
+    border-bottom-color: #3acdff;
+    transition: 0.5s;
+}
+
+input[type=number] {
+    font-size: 40px;
+    text-align: left;
+    color: #3acdff;
+    max-width: 95%;
+}
+
+#a_Trabajados, #diasTrabajados {
+    width: 37%;
+    margin-top: 30px;
+    text-align: center
+}
+
+#sbm {
+    width: 93%;
+    text-align: left;
+    margin-top: 30px;
+}
+
+#diasAguinaldo, #vacaciones, #primaVacacional{
+        width: 75%;
+    }
+
 form {
-  padding: 1em;
-  background: #faffc4;
+  padding: 17px;
+  background: #00173d;
   border: 1px solid #c1c1c1;
   margin: 2rem auto 0 auto;
-  max-width: 600px;
-  padding: 1em;
+  max-width: 800px;
+    color: white;
+    font-size: 110%;
 }
 form.resulta {
-  padding: 1em;
-  background: #e0edff;
+  padding: 17;
+  background-image: linear-gradient(to bottom right, #00cfff, #005af1);
   border: 1px solid navy;
   margin: 1rem auto 0 auto;
-  max-width: 600px;
-  padding: 1em;
+  max-width: 800px;
 }
 
 div.centrado {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
   margin-left: auto;
     margin-right: auto;
-    max-width: 100px
+    max-width: 835px
+}
+
+.spam {
+    font-size: 25px;
+    margin: 45px 0;
+    text-align: center;
+}
+
+.showResults {
+    display: none;
+}
+
+.showResults.now {
+    display: initial;
+}
+
+img.i1024 {
+    display: none;
+}
+
+@media screen and (max-width:1400px){
+    img.i1600 {
+        display: none;
+    }
+    
+    img.i1024 {
+        display: block;
+    }
+}
+
+@media screen and (max-width:1016px){
+    .logoContainer {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:804px){
+    
+    .break:before{ display: block; content: ''; }
+    
+    input[type=number] {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    p.titform {
+    margin-top: 7px;
+}
+    
+    #sbm {
+        width: 94.5%;
+        margin: 15px 0 17px 0;
+    }
+    
+    #a_Trabajados, #diasTrabajados {
+    width: 100%;
+        margin: 5px 0 17px 0;
+        text-align: left;
+}
+    
+    #diasAguinaldo, #vacaciones, #primaVacacional{
+        width: 75%;
+    }
+    
+     .botonlft {
+        margin: 3px 0 0 3%;
+        width: 20%;
+        height: 75px;
+        font-size: 30px;
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    
+    .logoMC {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .logoContainer {
+        height: 250px;
+    }
+    
+    #sbm {
+        width: 94%;
+    }
+}
+
+@media screen and (max-width:565px){
+    #sbm {
+        width: 93.5%;
+    }
+    
+    p.titform {
+    font-size: 34px;
+    margin-top: 5px;
+}
+    
+    input[type=number] {
+    font-size:30px;
+    margin-bottom: 15px;
+    }
+
+label {
+    font-size: 30px;
+}
+        .botonlft {
+        height: 65px;
+
+    }
+   
+}
+
+
+@media screen and (max-width:430px){
+    
+    p.instrucciones {
+        font-size: 24px;
+    }
+    
+        .form {
+        font-size: 20px;
+    }
+    
+        p.titform {
+    font-size: 27px;
+    margin-top: 5px;
+}
+    
+    input[type=number] {
+        font-size:25px;
+        margin-bottom: 15px;
+    }
+
+label {
+    font-size: 25px;
+}
+    
+    .botonlft {
+        margin: 3px 0 0 3%;
+        width: 30%;
+        padding: 0;
+        height: 45px;
+        font-size: 25px;
+    }
+    
+    #diasAguinaldo, #vacaciones, #primaVacacional{
+        width: 65%;
+    }
+    
+    #a_Trabajados, #diasTrabajados {
+    margin-top: 5px;
+}
+    #sbm {
+        width: 93%;
+        margin-top: 6px;
+    }
+}
+
+@media screen and (max-width:402px){
+    
+    p.instrucciones {
+        font-size: 22px;
+    }
+    
+        p.titform {
+    font-size: 24px;
+    margin-top: 5px;
+}
+    
+    input[type=number] {
+        font-size:21px;
+        margin-bottom: 15px;
+    }
+
+label {
+    font-size: 21px;
+}
+    
+    .botonlft {
+        margin: 3px 0 0 3%;
+        width: 29%;
+        padding: 0;
+        height: 45px;
+        font-size: 22px;
+    }
+    
+    #diasAguinaldo, #vacaciones, #primaVacacional{
+        width: 65%;
+    }
+    
+    #a_Trabajados, #diasTrabajados {
+    margin-top: 5px;
+}
+    
+    .logoContainer {
+        height: 200px;
+    }
+    
+    .calculo {
+    background-image: linear-gradient(to right, #3d87ff, #005af1);
+  padding: 0.7em;
+  font-size: 25px;
+  border: 0;
+  margin: 40px auto 23px auto;
+    text-align: center;
+}
+    
+@media screen and (max-width:331px){
+    
+    p.instrucciones {
+        font-size: 20px;
+    }
+    
+    p.titform {
+    font-size: 21px;
+    margin-top: 4px;
+}
+    input[type=number] {
+        font-size:20px;
+        margin-bottom: 15px;
+    }
+    
+    label {
+    font-size: 20px;
+}
+    
+        #sbm {
+        width: 92.3%;
+    }
+    
+    .logoContainer {
+        height: 175px;
+    }
+    
+    .spam {
+        font-size: 20px;
+    }
+    
+    }
+    
 }
