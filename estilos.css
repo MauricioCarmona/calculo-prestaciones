@@ -180,6 +180,7 @@ input[type=number] {
 
 #a_Trabajados, #diasTrabajados {
     width: 37%;
+    max-width: 295;
     margin-top: 30px;
     text-align: center;
     -webkit-appearance: none;
@@ -418,6 +419,7 @@ label {
     
     #a_Trabajados, #diasTrabajados {
     margin-top: 5px;
+        max-width: 234px;
 }
     
     .logoContainer {
@@ -453,8 +455,19 @@ label {
 }
     
         #sbm {
-        width: 92.3%;
+        width: 91%;
+            max-width: 216px;
     }
+    
+        #diasAguinaldo, #vacaciones, #primaVacacional{
+        width: 64%;
+            max-width: 140px;
+    }
+    
+    #a_Trabajados, #diasTrabajados {
+    margin-top: 5px;
+        max-width: 234px;
+}
     
     .logoContainer {
         height: 175px;
