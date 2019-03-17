@@ -133,6 +133,7 @@ p.resmos {
   border: 0;
   margin: 40px auto 23px auto;
     text-align: center;
+    -webkit-border-radius: 0;
 }
 
 .calculo:hover {
