@@ -4,6 +4,7 @@ body {
     color: white;
     margin: 0;
     -webkit-border-radius: 0;
+    -webkit-appearance: none;
 }
 
 .generalContainer {
@@ -64,7 +65,8 @@ hr {
     height: 80px;
   border: 0;
   margin: 0 auto 0 10px;
-    -webkit-border-radius: 0;
+border-radius: 0;
+    -webkit-appearance: none;
 }
 
 .botonlft:hover {
@@ -82,7 +84,8 @@ hr {
   margin-left: auto;
     margin-right: auto;
     border: 0;
-    -webkit-border-radius: 0;
+border-radius: 0;
+    -webkit-appearance: none;
 }
 
 .clean:hover {
@@ -136,7 +139,8 @@ p.resmos {
   border: 0;
   margin: 40px auto 23px auto;
     text-align: center;
-    -webkit-border-radius: 0;
+border-radius: 0;
+    -webkit-appearance: none;
 }
 
 .calculo:hover {
@@ -153,7 +157,8 @@ input {
     border: 0;
     background: transparent;
     border-bottom: 2px solid white;
-    -webkit-border-radius: 0;
+border-radius: 0;
+    -webkit-appearance: none;
 }
 
 
@@ -168,22 +173,27 @@ input[type=number] {
     text-align: left;
     color: #3acdff;
     max-width: 95%;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
 }
 
 #a_Trabajados, #diasTrabajados {
     width: 37%;
     margin-top: 30px;
-    text-align: center
+    text-align: center;
+    -webkit-appearance: none;
 }
 
 #sbm {
     width: 93%;
     text-align: left;
     margin-top: 30px;
+    -webkit-appearance: none;
 }
 
 #diasAguinaldo, #vacaciones, #primaVacacional{
         width: 75%;
+    -webkit-appearance: none;
     }
 
 form {
@@ -194,6 +204,7 @@ form {
   max-width: 800px;
     color: white;
     font-size: 110%;
+    -webkit-appearance: none;
 }
 form.resulta {
   padding: 17;
